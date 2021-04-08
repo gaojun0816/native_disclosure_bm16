@@ -3,7 +3,7 @@ It includes features:
 + w/o invocation back to Java method
 + invocation to Java Android APIs
 + mixed statical and dynamic registration of JNI functions.
-+ get relevant strings by invoking methods of a C++ class with different string types (e.g., std::string, char\*).
++ get relevant strings by invoking methods of a C++ class with different ways of string representation (e.g., std::string, char\*).
 
 
 NOTE: this app need certain permission to obtain IMEI. For simplicity reason,
