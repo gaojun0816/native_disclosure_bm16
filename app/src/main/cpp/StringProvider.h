@@ -10,54 +10,46 @@
 
 class StringProvider {
 public:
-    std::string getMclass();
+    const char* getMclass();
     std::string getNclass();
-    std::string getEnImeiMethod();
-    std::string getEnImeiSig();
+    const char* getEnImeiMethod();
+    const char* getEnImeiSig();
     std::string getAPIImeiMethod();
     std::string getAPIImeiSig();
     std::string getSendMethod();
-    std::string getSendSig();
+    const char* getSendSig();
 };
 
 
-std::string StringProvider::getMclass() {
-    std::string c = "lu/uni/jungao/bm16/MiddleCls";
-    return c;
+const char* StringProvider::getMclass() {
+    return "lu/uni/jungao/bm16/MiddleCls";
 }
 
 std::string StringProvider::getNclass() {
-    std::string c = "lu/uni/jungao/bm16/NativeDelegator";
-    return c;
+    return "lu/uni/jungao/bm16/NativeDelegator";
 }
 
 std::string StringProvider::getAPIImeiMethod() {
-    std::string m = "getImei";
-    return m;
+    return "getImei";
 }
 
 std::string StringProvider::getAPIImeiSig() {
-    std::string s = "()Ljava/lang/String;";
-    return s;
+    return "()Ljava/lang/String;";
 }
 
-std::string StringProvider::getEnImeiMethod() {
-    std::string m = "nativeGetIMEI";
-    return m;
+const char* StringProvider::getEnImeiMethod() {
+    return "nativeGetIMEI";
 }
 
-std::string StringProvider::getEnImeiSig() {
-    std::string s = "(Landroid/telephony/TelephonyManager;)Ljava/lang/String;";
-    return s;
+const char* StringProvider::getEnImeiSig() {
+    return "(Landroid/telephony/TelephonyManager;)Ljava/lang/String;";
 }
 
 std::string StringProvider::getSendMethod() {
-    std::string m = "sendPseudoSMS";
-    return m;
+    return "sendPseudoSMS";
 }
 
-std::string StringProvider::getSendSig() {
-    std::string s = "(Ljava/lang/String;)V";
-    return s;
+const char* StringProvider::getSendSig() {
+    return "(Ljava/lang/String;)V";
 }
 #endif //NDK_CALLEE_STRINGPROVIDER_H
